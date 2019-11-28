@@ -69,6 +69,7 @@
           },
           "configurations": {
             "production": {
+              "outputPath": "docs",
               "fileReplacements": [
                 {
                   "replace": "projects/ngx-chiptan-showcase/src/environments/environment.ts",
