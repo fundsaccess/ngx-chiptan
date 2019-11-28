@@ -33,10 +33,14 @@ export class Module {
 ```
 
 ## Demo
+https://fundsaccess.github.io/ngx-chiptan/ 
+
+or
 ```
-cd ngx-chiptan-showcase 
+cd projects/ngx-chiptan-showcase 
 ng serve
 ```
+
 
 ## Acknowledgments
 
