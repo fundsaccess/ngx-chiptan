@@ -1,0 +1,164 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ngx-chiptan": {
+      "projectType": "library",
+      "root": "projects/ngx-chiptan",
+      "sourceRoot": "projects/ngx-chiptan/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-chiptan/tsconfig.lib.json",
+            "project": "projects/ngx-chiptan/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-chiptan/src/test.ts",
+            "tsConfig": "projects/ngx-chiptan/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-chiptan/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-chiptan/tsconfig.lib.json",
+              "projects/ngx-chiptan/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ngx-chiptan-showcase": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "sass"
+        }
+      },
+      "root": "projects/ngx-chiptan-showcase",
+      "sourceRoot": "projects/ngx-chiptan-showcase/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ngx-chiptan-showcase",
+            "index": "projects/ngx-chiptan-showcase/src/index.html",
+            "main": "projects/ngx-chiptan-showcase/src/main.ts",
+            "polyfills": "projects/ngx-chiptan-showcase/src/polyfills.ts",
+            "tsConfig": "projects/ngx-chiptan-showcase/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/ngx-chiptan-showcase/src/favicon.ico",
+              "projects/ngx-chiptan-showcase/src/assets"
+            ],
+            "styles": [
+              "projects/ngx-chiptan-showcase/src/styles.sass"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ngx-chiptan-showcase/src/environments/environment.ts",
+                  "with": "projects/ngx-chiptan-showcase/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ngx-chiptan-showcase:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ngx-chiptan-showcase:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ngx-chiptan-showcase:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-chiptan-showcase/src/test.ts",
+            "polyfills": "projects/ngx-chiptan-showcase/src/polyfills.ts",
+            "tsConfig": "projects/ngx-chiptan-showcase/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-chiptan-showcase/karma.conf.js",
+            "assets": [
+              "projects/ngx-chiptan-showcase/src/favicon.ico",
+              "projects/ngx-chiptan-showcase/src/assets"
+            ],
+            "styles": [
+              "projects/ngx-chiptan-showcase/src/styles.sass"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-chiptan-showcase/tsconfig.app.json",
+              "projects/ngx-chiptan-showcase/tsconfig.spec.json",
+              "projects/ngx-chiptan-showcase/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ngx-chiptan-showcase/e2e/protractor.conf.js",
+            "devServerTarget": "ngx-chiptan-showcase:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ngx-chiptan-showcase:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "ngx-chiptan"
+}
