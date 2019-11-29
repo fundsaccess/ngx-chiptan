@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { flickerCanvas, flickerCode } from '../flicker';
+import { flickerCanvas, flickerCode } from './flicker';
 
 @Component({
   // tslint:disable-next-line:component-selector
