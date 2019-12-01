@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="256px" width="256px" style="text-align: center;" src="https://fundsaccess.github.io/ngx-iban/assets/angular.svg">
+  <img height="256px" width="256px" style="text-align: center;" src="https://fundsaccess.github.io/ngx-chiptan/assets/angular.svg">
 </p>
 
 # ngx-chiptan
