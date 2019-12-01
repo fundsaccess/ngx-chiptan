@@ -2,10 +2,17 @@
 
 Angular component to renders chiptan flicker code.
 
+Demo: https://fundsaccess.github.io/ngx-chiptan/ 
 ## Installation
 
+npm:
 ```
 $ npm i ngx-chiptan --save
+```
+
+yarn:
+```shell
+yarn add angular-iban
 ```
 
 ## Import
@@ -32,6 +39,14 @@ export class Module {
 </ngx-chiptan>
 ```
 
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| code | string | '' | ChipTAN [code](https://6xq.net/flickercodes/) to render. |
+| width | number | 205 | Canvas width. |
+| height | number | 100 | Canvas height. |
+| bgColor | string | '#000' | Canvas background color. |
+| barColor | string | '#fff' | Vertical bar(s) in canvas color. |
+
 ## Demo
 https://fundsaccess.github.io/ngx-chiptan/ 
 
@@ -40,7 +55,6 @@ or
 cd projects/ngx-chiptan-showcase 
 ng serve
 ```
-
 
 ## Acknowledgments
 

@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:ngx-chiptan": "ng build ngx-chiptan",
+    "build:ngx-chiptan-showcase": "ng build ngx-chiptan-showcase",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
