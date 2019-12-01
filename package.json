@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:ngx-chiptan": "ng build ngx-chiptan",
-    "build:ngx-chiptan-showcase": "ng build ngx-chiptan-showcase",
+    "build:ngx-chiptan-showcase": "ng build ngx-chiptan-showcase --prod --base-href https://fundsaccess.github.io/ngx-iban/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
