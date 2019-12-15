@@ -7,6 +7,9 @@
 Angular component to renders chiptan flicker code.
 
 Demo: https://fundsaccess.github.io/ngx-chiptan/ 
+
+For the Angularjs version see https://github.com/fundsaccess/ng-chiptan
+
 ## Installation
 
 npm:
