@@ -14,6 +14,11 @@
           "options": {
             "tsConfig": "projects/ngx-chiptan/tsconfig.lib.json",
             "project": "projects/ngx-chiptan/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-chiptan/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -57,7 +62,7 @@
             "main": "projects/ngx-chiptan-showcase/src/main.ts",
             "polyfills": "projects/ngx-chiptan-showcase/src/polyfills.ts",
             "tsConfig": "projects/ngx-chiptan-showcase/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/ngx-chiptan-showcase/src/favicon.ico",
               "projects/ngx-chiptan-showcase/src/assets"
@@ -81,7 +86,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -160,6 +164,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ngx-chiptan"
 }
