@@ -83,4 +83,4 @@ Inspired by
 [react-chiptan](https://github.com/basimhennawi/react-chiptan)
 
 ## License
-Copyright (c) 2019 fundsaccess AG. Licensed under the MIT License (MIT)
+Copyright (c) 2019-2022 fundsaccess AG. Licensed under the MIT License (MIT)
