@@ -11,13 +11,13 @@ import { flickerCanvas, flickerCode } from './flicker';
 export class NgxChiptanComponent implements OnInit {
 
   @Input()
-  code: string;
+  code: string | undefined;
 
   @Input()
-  width: number;
+  width: string;
 
   @Input()
-  height: number;
+  height: string;
 
   @Input()
   bgColor: string;
@@ -28,19 +28,15 @@ export class NgxChiptanComponent implements OnInit {
   private state: any;
   private interval: any;
 
-  constructor() {
-  }
-
-
   ngOnInit() {
+    if (!this.code) { return; }
+
     this.state = {
       canvas: new flickerCanvas(this.width, this.height, this.bgColor, this.barColor),
       code: new flickerCode(this.code),
     };
 
     const { canvas, code } = this.state;
-
-    if (!this.code) { return; }
 
     document
       .getElementById('flickercontainer')
