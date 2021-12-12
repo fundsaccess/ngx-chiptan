@@ -1,14 +1,12 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { flickerCanvas, flickerCode } from './flicker';
 
 @Component({
-  // tslint:disable-next-line:component-selector
   selector: 'ngx-chiptan',
   template: `
       <div id='flickercontainer'>
       </div>
   `,
-  styles: []
 })
 export class NgxChiptanComponent implements OnInit {
 

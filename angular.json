@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/ngx-chiptan",
       "sourceRoot": "projects/ngx-chiptan/src",
-      "prefix": "lib",
+      "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -62,7 +62,6 @@
             "main": "projects/ngx-chiptan-showcase/src/main.ts",
             "polyfills": "projects/ngx-chiptan-showcase/src/polyfills.ts",
             "tsConfig": "projects/ngx-chiptan-showcase/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "projects/ngx-chiptan-showcase/src/favicon.ico",
               "projects/ngx-chiptan-showcase/src/assets"
@@ -70,7 +69,13 @@
             "styles": [
               "projects/ngx-chiptan-showcase/src/styles.sass"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -101,7 +106,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
