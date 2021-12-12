@@ -22,6 +22,18 @@ yarn:
 yarn add angular-iban
 ```
 
+## Version compatibility
+
+This library supports Angular 8+. Please check the version compatibility below to choose the correct version to install.
+
+| angular-iban | Angular |
+|:------------:|:-------:|
+|    0.1.4     |   8.x   |
+|     10.x     |  10.x   |
+|     11.x     |  11.x   |
+|     12.x     |  12.x   |
+|     13.x     |  13.x   |
+
 ## Import
 
 Once installed you need to import the main module:
