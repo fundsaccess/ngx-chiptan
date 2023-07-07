@@ -35,6 +35,7 @@ This library supports Angular 8+. Please check the version compatibility below t
 |     13.x     |  13.x   |
 |     14.x     |  14.x   |
 |     15.x     |  15.x   |
+|     16.x     |  16.x   |
 
 ## Import
 
