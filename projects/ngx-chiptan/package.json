@@ -1,6 +1,6 @@
 {
   "name": "ngx-chiptan",
-  "version": "16.0.0",
+  "version": "17.0.0",
   "description": "Angular component to renders chiptan flicker code.",
   "author": "fundsaccess AG",
   "repository": {
@@ -20,10 +20,10 @@
     "tslib": "^2.0.0"
   },
   "peerDependencies": {
-    "@angular/common": "^16.x",
-    "@angular/core": "^16.x"
+    "@angular/common": "^17.x",
+    "@angular/core": "^17.x"
   },
   "engines": {
-    "node": "^16.14.0 || ^18.10.0"
+    "node": "^18.13.0 || ^20.9.0"
   }
 }

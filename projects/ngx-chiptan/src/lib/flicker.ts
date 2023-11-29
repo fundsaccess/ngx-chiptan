@@ -59,10 +59,10 @@ export function flickerCode(newcode) {
   }
 
   const checksum = () => {
-    let len = code.length / 2 - 1;
+    const len = code.length / 2 - 1;
     code = toHex(len, 2) + code.substr(2);
 
-    let luhndata = getPayload();
+    const luhndata = getPayload();
     let luhnsum = 0;
     for (let i = 0; i < luhndata.length; i += 2) {
       luhnsum += (1 * parseInt(luhndata[i], 16)) + quersumme(2 * parseInt(luhndata[i + 1], 16));
@@ -92,7 +92,7 @@ export function flickerCanvas(width, height, bgColor, barColor) {
   };
 
   const setup = () => {
-    let bits = new Object();
+    const bits = new Object();
     bits['0'] = [0, 0, 0, 0, 0];
     bits['1'] = [0, 1, 0, 0, 0];
     bits['2'] = [0, 0, 1, 0, 0];
@@ -112,7 +112,7 @@ export function flickerCanvas(width, height, bgColor, barColor) {
 
     code = '0FFF' + code;
 
-    bitarray = new Array();
+    bitarray = [];
     for (let i = 0; i < code.length; i += 2) {
       bitarray[i] = bits[code[i+1]];
       bitarray[i+1] = bits[code[i]];
@@ -132,8 +132,8 @@ export function flickerCanvas(width, height, bgColor, barColor) {
   }
 
   this.step = () => {
-    let margin = 7;
-    let barwidth = canvas.width / 5;
+    const margin = 7;
+    const barwidth = canvas.width / 5;
 
     bitarray[halfbyteid][0] = clock;
 

@@ -36,6 +36,7 @@ This library supports Angular 8+. Please check the version compatibility below t
 |     14.x     |  14.x   |
 |     15.x     |  15.x   |
 |     16.x     |  16.x   |
+|     17.x     |  17.x   |
 
 ## Import
 
@@ -86,4 +87,4 @@ Inspired by
 [react-chiptan](https://github.com/basimhennawi/react-chiptan)
 
 ## License
-Copyright (c) 2019-2022 fundsaccess AG. Licensed under the MIT License (MIT)
+Copyright (c) 2019-2023 fundsaccess AG. Licensed under the MIT License (MIT)

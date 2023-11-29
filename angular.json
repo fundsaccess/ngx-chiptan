@@ -100,18 +100,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-chiptan-showcase:build"
+            "buildTarget": "ngx-chiptan-showcase:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-chiptan-showcase:build:production"
+              "buildTarget": "ngx-chiptan-showcase:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-chiptan-showcase:build"
+            "buildTarget": "ngx-chiptan-showcase:build"
           }
         },
         "test": {
@@ -131,19 +131,21 @@
             "scripts": []
           }
         },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "protractorConfig": "projects/ngx-chiptan-showcase/e2e/protractor.conf.js",
-            "devServerTarget": "ngx-chiptan-showcase:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "ngx-chiptan-showcase:serve:production"
-            }
+            "lintFilePatterns": [
+              "projects/ngx-chiptan-showcase/src/**/*.ts",
+              "projects/ngx-chiptan-showcase/src/**/*.html"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
